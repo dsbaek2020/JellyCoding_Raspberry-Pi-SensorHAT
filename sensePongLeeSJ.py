@@ -1,3 +1,10 @@
+#이프로젝의 원본프로젝트는 아래의 코드클럽에서 참고했습니다. 
+#https://projects.raspberrypi.org/en/projects/sense-hat-pong
+#https://youtu.be/bzEBOjvA11w
+#작성자: 이승진
+#도움: 백대성
+
+
 from sense_hat import SenseHat
 from time import sleep
 
