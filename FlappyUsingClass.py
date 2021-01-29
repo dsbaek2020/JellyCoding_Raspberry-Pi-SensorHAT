@@ -12,6 +12,9 @@ https://trinket.io/embed/python/6e4cb01c6b
 
 Sense HAT quick guide
 https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/9
+https://pythonhosted.org/sense-hat/api/#joystick
+
+update: 2021.1.30
 '''
 
 from sense_hat import SenseHat
