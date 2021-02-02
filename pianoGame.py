@@ -1,4 +1,5 @@
-#Date: 21.01.27
+#Date: 21.2.2
+#만든사람: 김민지
 
 from sense_hat import SenseHat
 from time import sleep
