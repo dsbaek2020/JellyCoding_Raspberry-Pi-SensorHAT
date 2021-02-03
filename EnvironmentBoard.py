@@ -1,4 +1,4 @@
-#author : Chio SY
+#author : Choi SY
 # this project make environment dashboard device 
 #2021.2.3
 
