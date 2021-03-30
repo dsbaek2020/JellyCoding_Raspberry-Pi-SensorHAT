@@ -1,11 +1,9 @@
-#회전행렬을 이용한 이미지데이터 회전하기
+#선형대수학 코딩 연습: 회전행렬을 이용한 이미지데이터 회전하기, numpy를 최소 활용
 #준비물:
-   #라즈베리파이 + SenseHat Board
-#만든사람: KYL, BDS
+   #라즈베리파이 컴퓨터  + SenseHat Board
+#만든사람: KYL, BDS(Baek Dae Seong)
 #아직 라즈베리파 센스햇에 되지 않습니다. (알고리즘 만들 있는중)
 
-from sense_hat import SenseHat
-from time import sleep
 #참고자료: 
  #MIT 선형대수학 강의
  #https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-30-linear-transformations-and-their-matrices/
@@ -30,7 +28,7 @@ p = (150, 100, 100)
 g = (0,100,0)
 y = (100,100,0)
 
-
+# 원본 그림 
 figIn = [[b, b, b, b, b, b, b, b], 
          [b, b, b, b, b, b, b, b],
          [b, p, r, g, r, r, b, b], 
