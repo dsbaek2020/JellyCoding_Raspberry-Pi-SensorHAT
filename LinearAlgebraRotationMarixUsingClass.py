@@ -1,7 +1,4 @@
 
-
-#created by KYL, BDS
-
 import math
 import  numpy as np
 from sense_hat import SenseHat
@@ -10,16 +7,15 @@ from time import sleep
 
 sense = SenseHat()
 
-print('hello')
 b = (0, 0, 0)
-r = (80, 0, 0)
+r = (180, 0, 0)
 p = (150, 100, 100)
-g = (0,100,0)
-y = (100,100,0)
+g = (0,150,0)
+y = (150,150,0)
 
 # 원본 그림 
 figIn = [[b, b, b, b, b, b, b, b], 
-         [b, b, b, b, b, b, b, b],
+         [b, b, b, b, b, y, b, b],
          [b, p, r, g, r, r, b, b], 
          [b, r, r, r, r, r, b, b],
          [b, r, r, r, y, r, b, b], 
@@ -60,7 +56,7 @@ class Image(object):
         v2x = -1 * math.sin(math.radians(th))
         v2y = math.cos(math.radians(th))
 
-        M = np.array([[v1x, v1y], [v2x, v2y]])
+        M = np.array([[v1x, v2x], [v1y, v2y]])
 
         v_out = M.dot(v)
 
@@ -74,13 +70,12 @@ class Image(object):
         j_o = x_o+3
         i_o = -y_o+3
 
-        j_o = int(j_o)  
-        i_o = int(i_o)
+        j_o = int(round(j_o))  
+        i_o = int(round(i_o))
 
         if 0 <= j_o <=7 and 0<= i_o <=7:
           self.outImg[i_o][j_o] = color 
 
-    return self.outImg
 
 
 img1 =  Image(figIn) 
@@ -91,6 +86,7 @@ while True:
     #sense.set_pixels([pixel for line in figOut for pixel in line])
     sense.set_pixels(sum(img1.outImg,[]))
     #sleep(0.01)
+
 
 
 
