@@ -1,6 +1,10 @@
+'''
+ author: NaKyungHoon, dabaek
+ Change pixel pet bright up/down 
+'''
+
 from sense_hat import SenseHat
-from random import randint
-from random import choice
+from random import randint, choice
 from time import sleep
 
 sense = SenseHat()
