@@ -25,16 +25,9 @@ dog = [x,x,x,x,x,x,x,x,
        x,b,x,b,x,b,x,x,
        x,x,x,x,x,x,x,x]
 
-dog2 = [x,x,x,x,x,x,x,x,
-       x,x,x,x,x,x,x,x,
-       p,p,x,x,p,x,p,x,
-       x,p,b,b,p,y,y,x,
-       x,b,b,b,y,w,y,b,
-       x,b,b,b,b,y,y,x,
-       x,x,b,x,b,x,x,x,
-       x,x,x,x,x,x,x,x]
 
 while True:
+    #밝기 증가 ------------------------------------
     bright = 0
     for i in range(200):
         #print(i,  bright)
@@ -48,10 +41,11 @@ while True:
         bright = bright + 0.005
         
         
-        sleep(0.005)
+        sleep(0.005) #0.005초 기다리기 
         #sense.set_pixels(dog2)
         #sleep(0)
 
+    #밝기 감소 ------------------------------------
     bright = 1
     for i in range(200):
         #print(i,  bright)
@@ -65,36 +59,5 @@ while True:
         bright = bright - 0.005
         
         
-        sleep(0.005)
-    
-    
-    
-'''
-sense.set_pixel(0,1, (218, 160,221) )
-sense.set_pixel(1,2, (218, 160,221) )
-sense.set_pixel(1,3, (218, 160,221) )
-sense.set_pixel(1,4, (70, 130,180) )
-sense.set_pixel(1,5, (70, 130,180) )
-sense.set_pixel(1,6, (70, 130,180) )
-sense.set_pixel(1,6, (70, 130,180) )
-sense.set_pixel(2,3, (70, 130,180) )
-sense.set_pixel(2,4, (70, 130,180) )
-sense.set_pixel(2,5, (70, 130,180) )
-sense.set_pixel(3,3, (70, 130,180) )
-sense.set_pixel(3,4, (70, 130,180) )
-sense.set_pixel(3,5, (70, 130,180) )
-sense.set_pixel(3,6, (70, 130,180) )
-sense.set_pixel(4,2, (218, 160,221) )
-sense.set_pixel(4,3, (218, 160,221) )
-sense.set_pixel(4,4, (255, 255,0) )
-sense.set_pixel(4,5, (70, 130,180) )
-sense.set_pixel(5,3, (255, 255,0) )
-sense.set_pixel(5,4, (240, 255,255) )
-sense.set_pixel(5,5, (255, 255,0) )
-sense.set_pixel(5,6, (70, 130,180) )
-sense.set_pixel(6,2, (218, 160,221) )
-sense.set_pixel(6,3, (255, 255,0) )
-sense.set_pixel(6,4, (255, 255,0) )
-sense.set_pixel(6,5, (255, 255,0) )
-sense.set_pixel(7,4, (70, 130,180) )
-'''
+        sleep(0.005) #0.005초 기다리기 
+
