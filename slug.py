@@ -5,7 +5,7 @@
 from sense_hat import SenseHat
 from time import sleep
 
-#define global variavle---------------
+#define global variable---------------
 sense = SenseHat()
 slug = [[5,3], [6,3],[7,3]]
 directionkey = 'up'
