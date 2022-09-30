@@ -9,8 +9,6 @@ from time import sleep
 sense = SenseHat()
 slug = [[5,3], [6,3],[7,3]]
 directionkey = 'left'
-v = [0,0]
-
 
 def change_up(event):
     global directionkey
@@ -62,7 +60,16 @@ def move_slug():
                
     slug.insert(0, [head_x, head_y])
     k = slug.pop()
+    
+    if head_y == 8 or head_y == -1 or \
+       head_x == 8 or head_x == -1 :
+        return 'game over'
+    else:
+        return 'I am happy'
 
+
+        
+    
         
 sense.stick.direction_up = change_up
 sense.stick.direction_down = change_down
@@ -72,6 +79,10 @@ sense.stick.direction_right = change_right
 while True:
     sense.clear()
     draw_slug()
-    move_slug()
+    status = move_slug()
+    if status  == 'game over':
+        sense.show_message('game over')
+        print('game over')
+        break
     
     sleep(0.5)
